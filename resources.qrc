@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/application-resize-actual.png</file>
+        <file>icons/application-resize-full.png</file>
+        <file>icons/arrow.png</file>
+        <file>icons/arrow-090.png</file>
+        <file>icons/arrow-180.png</file>
+        <file>icons/arrow-270.png</file>
+        <file>icons/arrow-resize-090.png</file>
+        <file>icons/control.png</file>
+        <file>icons/control-stop-square.png</file>
+        <file>icons/door-open-out.png</file>
+        <file>icons/information-white.png</file>
+        <file>icons/magnifier-zoom.png</file>
+        <file>icons/property-blue.png</file>
+        <file>icons/question-white.png</file>
+        <file>icons/ruler-triangle.png</file>
+    </qresource>
+</RCC>

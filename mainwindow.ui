@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>579</width>
+    <height>487</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Курсовая работа, вариант № 13</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>5</number>
+    </property>
+    <property name="margin">
+     <number>5</number>
+    </property>
+    <item>
+     <widget class="GLWidget" name="widget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="statusTip">
+       <string>Виджет с визуализацией. Используйте управление мышью! (Движения мышью с зажатыми левой или правой или средней кнопкой)</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2"/>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSlider" name="heightSetter">
+      <property name="statusTip">
+       <string>Устанавливает начальную высоту мяча.</string>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>50</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="pageStep">
+       <number>5</number>
+      </property>
+      <property name="value">
+       <number>5</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksAbove</enum>
+      </property>
+      <property name="tickInterval">
+       <number>5</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="mainControlsBox" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>125</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QGridLayout" name="cameraManagementLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="camUpButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>36</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>36</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="statusTip">
+            <string>Поворот камеры вверх.</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/icons/arrow-090.png</normaloff>:/icons/arrow-090.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Up</string>
+           </property>
+           <property name="autoRepeat">
+            <bool>true</bool>
+           </property>
+           <property name="autoRepeatInterval">
+            <number>50</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPushButton" name="camDownButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>36</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>36</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="statusTip">
+            <string>Поворот камеры вниз.</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/icons/arrow-270.png</normaloff>:/icons/arrow-270.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Down</string>
+           </property>
+           <property name="autoRepeat">
+            <bool>true</bool>
+           </property>
+           <property name="autoRepeatInterval">
+            <number>50</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="camLeftButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>36</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>36</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="statusTip">
+            <string>Поворот камеры налево.</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/icons/arrow-180.png</normaloff>:/icons/arrow-180.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Left</string>
+           </property>
+           <property name="autoRepeat">
+            <bool>true</bool>
+           </property>
+           <property name="autoRepeatInterval">
+            <number>50</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="camRightButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>36</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>36</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="statusTip">
+            <string>Поворот камеры направо.</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/icons/arrow.png</normaloff>:/icons/arrow.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Right</string>
+           </property>
+           <property name="autoRepeat">
+            <bool>true</bool>
+           </property>
+           <property name="autoRepeatInterval">
+            <number>50</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <property name="leftMargin">
+            <number>3</number>
+           </property>
+           <property name="topMargin">
+            <number>2</number>
+           </property>
+           <property name="rightMargin">
+            <number>3</number>
+           </property>
+           <property name="bottomMargin">
+            <number>2</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="fullScreenButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>30</width>
+               <height>26</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>26</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Переключиться в полноэкранный режим и обратно.</string>
+             </property>
+             <property name="statusTip">
+              <string>Переключение в полноэкранный режим и обратно.</string>
+             </property>
+             <property name="whatsThis">
+              <string>Эта кнопка позволяет переключаться из оконоого режима в полноэкранный и обратно. Так же можно использовать комбинацию Alt+Enter.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/icons/application-resize-full.png</normaloff>:/icons/application-resize-full.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Alt+Return</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>10</width>
+           <height>15</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QFormLayout" name="formLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="heightLabel">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="statusTip">
+            <string>Начальная высота мяча.</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/icons/arrow-resize-090.png</pixmap>
+           </property>
+           <property name="buddy">
+            <cstring>spinBox</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="spinBox">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Начальная высота мяча.</string>
+           </property>
+           <property name="statusTip">
+            <string>Начальная высота мяча.</string>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>50</number>
+           </property>
+           <property name="singleStep">
+            <number>5</number>
+           </property>
+           <property name="value">
+            <number>5</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="zoomLabel">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="statusTip">
+            <string>Степень приближения сцены.</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/icons/magnifier-zoom.png</pixmap>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="buddy">
+            <cstring>zoomSelector</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="zoomSelector">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Степень приближения сцены.</string>
+           </property>
+           <property name="statusTip">
+            <string>Степень приближения сцены.</string>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="correctionMode">
+            <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+           </property>
+           <property name="suffix">
+            <string> %</string>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+           <property name="value">
+            <number>100</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label">
+           <property name="toolTip">
+            <string>Изменяет радиус мяча.</string>
+           </property>
+           <property name="statusTip">
+            <string>Радиус мяча.</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/icons/ruler-triangle.png</pixmap>
+           </property>
+           <property name="buddy">
+            <cstring>doubleSpinBox</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QDoubleSpinBox" name="doubleSpinBox">
+           <property name="toolTip">
+            <string>Изменяет радиус мяча.</string>
+           </property>
+           <property name="statusTip">
+            <string>Радиус мяча.</string>
+           </property>
+           <property name="decimals">
+            <number>2</number>
+           </property>
+           <property name="minimum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>5.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>10</width>
+           <height>10</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QSlider" name="stiffnessSlider">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="statusTip">
+          <string>Упругость мяча от 0% (неупругий) до 100% (упругий). Определяет быстроту затухания движения мяча.</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="value">
+          <number>75</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::TicksBelow</enum>
+         </property>
+         <property name="tickInterval">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="stiffnessLabel">
+         <property name="statusTip">
+          <string>Упругость мяча от 0% (неупругий) до 100% (упругий). Определяет быстроту затухания движения мяча.</string>
+         </property>
+         <property name="text">
+          <string>&amp;Упругость мяча</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+         </property>
+         <property name="buddy">
+          <cstring>stiffnessSlider</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>15</width>
+           <height>15</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ballColorBtn">
+         <property name="statusTip">
+          <string>Меняет цвет мяча.</string>
+         </property>
+         <property name="text">
+          <string>Цвет &amp;мяча</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="floorColorBtn">
+         <property name="statusTip">
+          <string>Меняет цвет плоскости, на которую падает мяч.</string>
+         </property>
+         <property name="text">
+          <string>Цвет &amp;пола</string>
+         </property>
+         <property name="shortcut">
+          <string>П</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bgColorBtn">
+         <property name="statusTip">
+          <string>Меняет цвет фона (подложки)</string>
+         </property>
+         <property name="text">
+          <string>Цвет &amp;фона</string>
+         </property>
+         <property name="shortcut">
+          <string>Ф</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::MinimumExpanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>17</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="startButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Нажмите, чтобы запустить/остановить визуализацию.</string>
+         </property>
+         <property name="statusTip">
+          <string>Запускает визуализацию.</string>
+         </property>
+         <property name="text">
+          <string>Пу&amp;ск</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/icons/control.png</normaloff>:/icons/control.png</iconset>
+         </property>
+         <property name="shortcut">
+          <string>С</string>
+         </property>
+         <property name="autoDefault">
+          <bool>true</bool>
+         </property>
+         <property name="default">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>579</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="mainMenu">
+    <property name="title">
+     <string>Программа</string>
+    </property>
+    <addaction name="action_start"/>
+    <addaction name="separator"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="action_help"/>
+    <addaction name="action_tech"/>
+    <addaction name="separator"/>
+    <addaction name="action_about"/>
+    <addaction name="action_Qt"/>
+   </widget>
+   <addaction name="mainMenu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="statusTip">
+    <string>Это строка состояния, она показывает вот такой справочный текст обо всех кнопках.</string>
+   </property>
+  </widget>
+  <action name="action_start">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/control.png</normaloff>:/icons/control.png</iconset>
+   </property>
+   <property name="text">
+    <string>За&amp;пуск визуализации</string>
+   </property>
+   <property name="toolTip">
+    <string>Начинает визуализацию.</string>
+   </property>
+   <property name="statusTip">
+    <string>Начинает визуализацию.</string>
+   </property>
+   <property name="shortcut">
+    <string comment="Enter">Return</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/door-open-out.png</normaloff>:/icons/door-open-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>В&amp;ыход</string>
+   </property>
+   <property name="toolTip">
+    <string>Выход из программы.</string>
+   </property>
+   <property name="statusTip">
+    <string>Закрывает программу.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/information-white.png</normaloff>:/icons/information-white.png</iconset>
+   </property>
+   <property name="text">
+    <string>О п&amp;рограмме</string>
+   </property>
+   <property name="toolTip">
+    <string>Показать окно с информацией об этой программе.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
+  <action name="action_Qt">
+   <property name="text">
+    <string>О фреймвор&amp;ке Qt</string>
+   </property>
+   <property name="toolTip">
+    <string>Показать окно с информацией об используемом фреймворке.</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutQtRole</enum>
+   </property>
+  </action>
+  <action name="action_tech">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/property-blue.png</normaloff>:/icons/property-blue.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Техническое задание</string>
+   </property>
+   <property name="statusTip">
+    <string>Показать техническое задание на курсовую работу</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="action_help">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/question-white.png</normaloff>:/icons/question-white.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Справка</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GLWidget</class>
+   <extends>QWidget</extends>
+   <header>glwidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>ballColorChanged(QColor)</signal>
+    <signal>zoomChanged(int)</signal>
+    <slot>setZRotation(int)</slot>
+    <slot>setBallElasticity(int)</slot>
+    <slot>setZoom(int)</slot>
+    <slot>setZoom(QString)</slot>
+    <slot>setHeight(int)</slot>
+    <slot>chooseBallColor()</slot>
+    <slot>setBallColor(QColor)</slot>
+    <slot>chooseFloorColor()</slot>
+    <slot>chooseBgColor()</slot>
+    <slot>turnCameraUp()</slot>
+    <slot>turnCameraDown()</slot>
+    <slot>turnCameraLeft()</slot>
+    <slot>turnCameraRight()</slot>
+    <slot>switchFullScreen()</slot>
+    <slot>setBallRadius(double)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>heightSetter</tabstop>
+  <tabstop>spinBox</tabstop>
+  <tabstop>zoomSelector</tabstop>
+  <tabstop>doubleSpinBox</tabstop>
+  <tabstop>stiffnessSlider</tabstop>
+  <tabstop>ballColorBtn</tabstop>
+  <tabstop>floorColorBtn</tabstop>
+  <tabstop>bgColorBtn</tabstop>
+  <tabstop>startButton</tabstop>
+  <tabstop>camUpButton</tabstop>
+  <tabstop>camRightButton</tabstop>
+  <tabstop>camDownButton</tabstop>
+  <tabstop>camLeftButton</tabstop>
+  <tabstop>fullScreenButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>heightSetter</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>setHeight(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>448</x>
+     <y>388</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>388</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleSpinBox</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>widget</receiver>
+   <slot>setBallRadius(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>535</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>camUpButton</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>turnCameraUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>512</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>408</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>camRightButton</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>turnCameraRight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>545</x>
+     <y>62</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>camLeftButton</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>turnCameraLeft()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>476</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>395</x>
+     <y>78</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fullScreenButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>switchFullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>518</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>482</x>
+     <y>22</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bgColorBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>chooseBgColor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>406</x>
+     <y>350</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>floorColorBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>chooseFloorColor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>486</x>
+     <y>327</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ballColorBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>chooseBallColor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>487</x>
+     <y>300</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stiffnessSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>setBallElasticity(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>505</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomSelector</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>setZoom(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>heightSetter</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>443</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>heightSetter</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>445</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>529</x>
+     <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>camDownButton</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>turnCameraDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>511</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>409</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>zoomChanged(int)</signal>
+   <receiver>zoomSelector</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>417</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>513</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>switchFullScreen()</slot>
+ </slots>
+</ui>
