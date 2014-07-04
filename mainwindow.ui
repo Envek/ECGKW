@@ -724,6 +724,9 @@
    <property name="shortcut">
     <string comment="Enter">Return</string>
    </property>
+   <property name="menuRole">
+    <enum>QAction::ApplicationSpecificRole</enum>
+   </property>
   </action>
   <action name="action_exit">
    <property name="icon">

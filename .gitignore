@@ -9,6 +9,7 @@ ui_*.h
 # Построенные exe-шники и линукс-бинарники
 *.exe
 ECGKW
+ECGKW.pro.user
 
 # Генерируемые Windows гадости
 Thumbs.db

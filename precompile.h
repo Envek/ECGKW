@@ -8,7 +8,11 @@
 #include <QGLWidget>
 #include <QtGui>
 #include <QtOpenGL>
-#include <QtGui/QApplication>
+#ifdef QT5
+    #include <QApplication>
+#else
+    #include <QtGui/QApplication>
+#endif
 #include <QDialog>
 #include <QMatrix4x4>
 #include <QVector3D>

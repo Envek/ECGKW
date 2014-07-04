@@ -5,6 +5,12 @@ QT += opengl
 TARGET = ECGKW
 TEMPLATE = app
 
+# Qt 5 compatibility
+contains(QT_VERSION, ^5.*) {
+  QT += widgets
+  DEFINES += QT5
+}
+
 # CONFIG += console precompile_header
 PRECOMPILED_HEADER = precompile.h
 SOURCES += main.cpp \

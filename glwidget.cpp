@@ -1,6 +1,9 @@
 #include <QtGui>
 #include <QtOpenGL>
 
+#include <OpenGL/glext.h>
+#include <OpenGL/glu.h>
+
 #include <math.h>
 
 #include "glwidget.h"
